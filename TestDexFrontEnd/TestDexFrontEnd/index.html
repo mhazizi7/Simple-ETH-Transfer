@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple DEX</title>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Simple DEX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              
+            </li>                   
+          </ul>
+          <button id="connectButton" class="btn btn-outline-dark">Connect To Wallet</button>
+        </div>
+      </div>
+    </nav>  
+<div class="container">
+    
+  <h5>Connected Accounts : </h5>
+  <div class="table-responsive">
+    <table class="table table-hover" >
+    <thead>
+      <tr>
+        <th scope="col">Address</th>
+        <th scope="col">Balance</th>        
+      </tr>
+    </thead>
+    <tbody id="tBodyConnectedAccounts">    
+    </tbody>
+  </table>
+</div>
+<button id="UpdateAccounts" class="btn btn-primary">Update Accounts</button>
+<br>
+<br>
+<h5>Send ETH : </h5>
+<div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" class="btn btn-success" id="getCurrentAccountButton">Get Current Account Info</button>    
+</div>
+<div class="row mb-3">
+  <label for="FromAccount" class="col-sm-2 col-form-label">From Account : </label>
+  <div class="col-sm-10">        
+    <input id="FromAccount" readonly  class="form-control-plaintext" />
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="Balance" class="col-sm-2 col-form-label">balance : </label>
+  <div class="col-sm-10">        
+    <input id="Balance"  class="form-control-plaintext" />
+  </div>
+</div>
+    <div class="row mb-3">
+      <label for="ethAmount" class="col-sm-2 col-form-label">ETH Amount : </label>
+      <div class="col-sm-10">        
+        <input id="ethAmount"  class="form-control" placeholder="0.1"  step="0.1" min="0" type="number"/>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="ethAddress" class="col-sm-2 col-form-label">Address : </label>
+      <div class="col-sm-10">        
+        <input id="ethAddress" class="form-control"  placeholder="0x..." type="text"/>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" class="btn btn-primary" id="fundButton">Send ETH</button>    
+    </div>
+        
+
+  </div>
+  </body>
+  <script src="./bootstrap.bundle.min.js"></script>
+  <script src="./index.js" type="module"></script>
+</html>
